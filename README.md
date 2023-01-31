@@ -1,1 +1,1 @@
-# GalaxyForge
+# Galaxy Forge
