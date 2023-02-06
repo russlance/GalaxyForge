@@ -11,7 +11,7 @@ The Galactic Map is depicted in a 2D envionment. Each section occupies the thick
 ![Image map](/galaxyMap.png)
 
 ## The Galactic Map is made up of the following:
-1. [Galactic Core]
+1. [Galactic Core](#galactic-core)
 2. [Galactic Sectors]
 3. [Galactic Zones]
 4. [Regions]
