@@ -1,59 +1,50 @@
-﻿import React, { Component } from "react";
+﻿import React, { Component, useState, useEffect } from "react";
 import {
     HexGrid,
     Layout,
     Hexagon,
     Text,
     Path,
-    Hex
+    HexUtils
 } from 'react-hexgrid';
-import { Box, Typography } from "@mui/material";
-import { css, jsx } from "@emotion/react"
+import { Box, Typography, Button } from "@mui/material";
+import { generateGrid } from "../backend/mapData";
 
-export class MapComponent extends Component {
-    static displayName = MapComponent.name;
+export function MapComponent() {
+    const [hexagons, setHexagons] = useState(generateGrid);
 
-    constructor(props) {
-        super(props);
+    const handleSelection = (item) => {
+        console.log("clicked: " + item.sectorName);
     }
 
-    render() {
-        return (
-            <Box>
-                <Typography>Map</Typography>
-                <HexGrid
-                    style={{
-                        border: `2px solid "#868e96}`,
-                        background: "#212121",
-                    }}
+    return (
+        <>
+            <Typography>Map</Typography>
+            <HexGrid viewBox="-50 -50 100 100"
+            >
+                <Layout
+                    flat={true}
+                    spacing={1.1}
+                    origin={{ x: 0, y: 0 }}
+                    size={{ x: 5.25, y: 5.25 }}
                 >
-                    {/* Grid with manually inserted hexagons */}
-                    <Layout
-                        flat={true}
-                        spacing={1.1}
-                        origin={{ x: 0, y: 0 }}
-                    >
-                        <Hexagon q={0} r={0} s={0} />
-                        <Hexagon q={0} r={-1} s={1} />
-                        <Hexagon q={0} r={1} s={-1} />
-                        <Hexagon q={1} r={-1} s={0}>
-                            <Text css={css`
-                                font-size: 0.17em;
-                                fill: white;
-                                fill-opacity: 0.7;
-                                transition: fill-opacity 0.5s;
-                                &:hover {
-                                  fill-opacity: 1;
-                                }
-                  `}>1, -1, 0</Text>
-                        </Hexagon>
-                        <Hexagon q={1} r={0} s={-1} />
-                        <Hexagon q={-1} r={1} s={0} />
-                        <Hexagon q={-1} r={0} s={1} />
-                        <Hexagon q={-2} r={0} s={1} />
-                    </Layout>
-                </HexGrid>
-            </Box>
-        );
-    }
+                    {
+                        hexagons.map((hex, i) => (
+                            <Hexagon
+                                key={i} q={hex.hex.q} r={hex.hex.r} s={hex.hex.s}
+                                onClick={() => {
+                                    handleSelection(hex.info)
+                                }}
+
+                            >
+                                <Text>
+                                    {HexUtils.getID(hex.hex)}
+                                </Text>
+                            </Hexagon>
+                        ))
+                    }
+                </Layout>
+            </HexGrid>
+        </>
+    );
 }

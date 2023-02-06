@@ -1,4 +1,15 @@
-﻿export const nodes = [
+﻿export const NodeType = {
+    // #region Solar System Level
+    SolarSystem: Symbol("SolarSystem"),
+    Planet: Symbol("Planet"),
+    //#endregion
+
+    // #region Game Level
+    Game: Symbol("Game"),
+    //#endregion
+}
+
+export const nodes = [
     { id: 1, label: "Node 1" },
     { id: 2, label: "Node 2" },
     { id: 3, label: "Node 3" },

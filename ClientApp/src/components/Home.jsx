@@ -8,55 +8,45 @@ export class Home extends Component {
     static displayName = Home.name;
     constructor(props) {
         super(props);
-        this.state = {
-            displayMap: true,
-            displayGraph: false,
-            displayText: "Galactic Map",
-        };
-        this.changeDisplay = this.changeDisplay.bind(this);
-    }
-
-    changeDisplay() {
-        if (displayMap) {
-            this.setState({
-                displayMap: false,
-                displayGraph: true,
-                displayText: "Relational Graph",
-            })
-        }
-        else {
-            this.setState({
-                displayMap: true,
-                displayGraph: false,
-                displayText: "Galactic Map",
-            })
-        }
     }
 
     render() {
         return (
-            <Grid
-                container
-                spacing={2}
-                justifyContent="center"
+            <Box
+                sx=
+                {{
+                    display: "flex",
+                    flexDirection: "row",
+                    backgroundColor: "#212121",
+                    height: "90vh",
+                    justifyContent: "center",
+                    p: "3px",
+                }}
             >
-                <Grid
-                    item
-                    xs={8}
-                    sx=
-                    {{
-                        backgroundColor: "#212121",
+                <Box
+                    sx={{
+                        maxWidth: "60%",
                     }}
                 >
-                    <Box >
-                        <MapComponent />
-                    </Box>
-                </Grid>
-                <Grid item xs={4} alignItems="right">
-                    <Info />
-                    <RelationalGraph />
-                </Grid>
-            </Grid>
+                    <MapComponent />
+                </Box>
+                <Box
+                    sx={{
+                        maxWidth: "40%",
+                    }}
+                >
+                    <Info
+                        sx={{
+                            height: "50vh",
+                        }}
+                    />
+                    <RelationalGraph
+                        sx={{
+                            height: "40vh",
+                        }}
+                    />
+                </Box>
+            </Box>
         );
     }
 }

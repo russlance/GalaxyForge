@@ -29,7 +29,11 @@ export default function RelationalGraph() {
         }
     };
     return (
-        <Box>
+        <Box
+            sx={{
+                height: "50vh",
+            }}
+        >
             <Typography>Relational Graph</Typography>
             <Graph
                 graph={graph}
