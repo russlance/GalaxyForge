@@ -20,7 +20,7 @@ The Galactic Map is depicted in a 2D envionment. Each section occupies the thick
 
 ### Galactic Core
 
-The galactic core is an area depicted an hexagon. This area consists of 91 [Galactic Zones](#galactic-zones).
+The galactic core is an area depicted as a hexagon. This area consists of 91 [Galactic Zones](#galactic-zones).
 
 ### Galactic Sectors
 
