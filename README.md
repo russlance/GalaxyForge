@@ -1,5 +1,11 @@
 # Galaxy Forge
 
+## NOTE: This is a work in progress!
+
+Galaxy Forge is a tool to to build out the lore for your galaxy. There is a potential for 1,477,003,723 solar systems throughout this galaxy.
+
+This tool does not come pre-populated with data, but needs to be fleshed out by the user.
+
 ## Table of Contents
 1. [Galactic Map](#galactic-map)
 2. [Data Structure](#data-structure)
@@ -20,7 +26,7 @@ The Galactic Map is depicted in a 2D envionment. Each section occupies the thick
 
 ### Galactic Core
 
-The galactic core is an area depicted as a hexagon. This area consists of 91 [Galactic Zones](#galactic-zones).
+The galactic core is an area depicted as a hexagon. This area consists of 169 [Galactic Zones](#galactic-zones).
 
 ### Galactic Sectors
 
@@ -30,15 +36,15 @@ Each galactic sector is made up of 51 [Glactic Zones](#galactic-zones) in the sh
 
 ### Galactic Zones
 
-Each galactic zone consists of 19 [Regions](#regions).
+Each galactic zone consists of 169 [Regions](#regions).
 
 ### Regions
 
-Each region is made up of 19 [Sectors](#sectors).
+Each region is made up of 169 [Sectors](#sectors).
 
 ### Sectors
 
-A sector is made up of 91 [Solar Systems](#solar-systems).
+A sector is made up of 169 [Solar Systems](#solar-systems).
 
 ### Solar Systems
 

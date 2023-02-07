@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import Graph from "react-vis-network-graph";
-import { nodes, edges } from "./RelationalGraphBackend";
+import { nodes, edges } from "../backend/RelationalGraphBackend";
 import { Box, Typography } from "@mui/material";
 
 export default function RelationalGraph() {

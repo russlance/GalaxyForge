@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { AppBar, Container, Typography, Toolbar } from '@mui/material';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
@@ -23,19 +24,30 @@ export class NavMenu extends Component {
 
     render() {
         return (
-            <header>
-                <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-                    <NavbarBrand tag={Link} to="/" className="text-light">Galaxy Forge</NavbarBrand>
-                    <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-                    <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-                        <ul className="navbar-nav flex-grow">
-                            <NavItem>
-                                <NavLink tag={Link} className="text-light" to="/">Home</NavLink>
-                            </NavItem>
-                        </ul>
-                    </Collapse>
-                </Navbar>
-            </header>
+            <AppBar position="static">
+                <Container>
+                    <Toolbar m="0px">
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component={Link}
+                            to="/"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            Galaxy Forge
+                        </Typography>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+
         );
     }
 }

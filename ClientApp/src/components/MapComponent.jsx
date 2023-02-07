@@ -10,11 +10,11 @@ import {
 import { Box, Typography, Button } from "@mui/material";
 import { generateGrid } from "../backend/mapData";
 
-export function MapComponent() {
+export default function MapComponent() {
     const [hexagons, setHexagons] = useState(generateGrid);
 
     const handleSelection = (item) => {
-        console.log("clicked: " + item.sectorName);
+        console.log("clicked: " + item.q + " " + item.r + " " + item.s);
     }
 
     return (
@@ -26,19 +26,23 @@ export function MapComponent() {
                     flat={true}
                     spacing={1.1}
                     origin={{ x: 0, y: 0 }}
-                    size={{ x: 5.25, y: 5.25 }}
+                    size={{ x: 3, y: 3 }}
                 >
                     {
                         hexagons.map((hex, i) => (
                             <Hexagon
-                                key={i} q={hex.hex.q} r={hex.hex.r} s={hex.hex.s}
+                                key={i}
+                                q={hex.sectorAddress.q}
+                                r={hex.sectorAddress.r}
+                                s={hex.sectorAddress.s}
                                 onClick={() => {
-                                    handleSelection(hex.info)
+                                    handleSelection(hex.sectorAddress)
                                 }}
 
                             >
-                                <Text>
-                                    {HexUtils.getID(hex.hex)}
+                                <Text >
+                                    {hex.sectorName}
+                                    {/*{HexUtils.getID(hex.hex)}*/}
                                 </Text>
                             </Hexagon>
                         ))
