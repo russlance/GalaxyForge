@@ -20,7 +20,7 @@ The Galactic Map is depicted in a 2D envionment. Each section occupies the thick
 
 ### Galactic Core
 
-The galactic core is an area depicted an hexagon. This area consists of 91 [Galactic Zones](#galactic-zones).
+The galactic core is an area depicted as a hexagon. This area consists of 91 [Galactic Zones](#galactic-zones).
 
 ### Galactic Sectors
 
@@ -30,19 +30,19 @@ Each galactic sector is made up of 51 [Glactic Zones](#galactic-zones) in the sh
 
 ### Galactic Zones
 
-Each of the [Glactic Sectors](#galactic-sectors) are made up of 51 galactic zones. Each zone consists of 19 [Regions](#regions).
+Each galactic zone consists of 19 [Regions](#regions).
 
 ### Regions
 
-Each [Galactic Zone](#galactic-zones) consists of 19 regions. Each region is made up of 19 [Sectors](#sectors).
+Each region is made up of 19 [Sectors](#sectors).
 
 ### Sectors
 
-A [Region](#regions) consists of 19 sectors. A sector is made up of 91 [Solar Systems](#solar-systems).
+A sector is made up of 91 [Solar Systems](#solar-systems).
 
 ### Solar Systems
 
-A [Sector](#sector) consists of 91 solar system. Each solar system may contain:
+Each solar system may contain:
 * 0 to 3 stars
 * 0 to 20 bodies. A body can be a planet, gas giant, astroid field, or gas or particle ring or sphere.
 * 0 to 5 primary species
