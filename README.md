@@ -34,11 +34,9 @@ The galactic core is an area depicted as a hexagon. This area consists of 169 [G
 
 ### Galactic Sectors
 
-The Galactic Sectors include the [Galactic Core](#galactic-core) (in the shape of a hexagon), plus each edge of the Galactic Core (eaach in the shape of half of a hexagon, and made up of hexagons). See the [Galactic Map](#galactic-map) above for illustration. This makes a total of 7 Galactic Sectors. 
+The Galactic Sectors include the [Galactic Core](#galactic-core) (in the shape of a hexagon), plus each edge of the Galactic Core (each in the shape of half of a hexagon, and made up of hexagons). See the [Galactic Map](#galactic-map) above for illustration. This makes a total of 7 Galactic Sectors. 
 
-Galactic Sectors are numbered from 1-6 starting with the sector above the Galactic Core, then continuing numbering from the top of the above map and incrementing clockwise.
-
-Each Galactic Sector contains 85 Galactic Zones.
+Galactic Sectors are numbered from 1-6 starting with the sector above the Galactic Core, then continuing numbering from the top of the above map and incrementing clockwise. Each of these sectors contains 85 Galactic Zones.
 
 ### Galactic Zones
 
@@ -55,8 +53,8 @@ A sector is made up of 169 [Solar Systems](#solar-systems).
 ### Solar Systems
 
 Each solar system may contain:
-* 0 to 3 stars
-* 0 to 20 bodies. A body can be a planet, gas giant, astroid field, or gas or particle ring or sphere.
-* 0 to 5 primary species
+* Celestial Bodies. A body can be a planet, gas giant, astroid field, a gas or particle ring or sphere, a star, etc.
+* Structures. A structure can be stations, mining bases, military bases, etc.
+* Species.
 
 ## Data Structure
