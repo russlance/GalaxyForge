@@ -1,6 +1,6 @@
 ﻿svg {
     height: 90vh;
-    width: 80%
+    width: 80%;
 }
 
     svg g {
@@ -19,12 +19,13 @@
         svg g polygon {
             stroke: #3F51B5;
             stroke-width: 0.2px;
+            overflow: hidden;
             transition: fill-opacity .2s;
         }
 
         svg g text {
-            font-size: 0.1em;
-            fill: #000;
+            font-size: 0.05em;
+            fill: #F6F5F5;
             fill-opacity: 0.9;
             transition: fill-opacity .2s;
         }

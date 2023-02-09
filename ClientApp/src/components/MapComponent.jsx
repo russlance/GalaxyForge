@@ -14,19 +14,18 @@ export default function MapComponent() {
     const [hexagons, setHexagons] = useState(generateGrid);
 
     const handleSelection = (item) => {
-        console.log("clicked: " + item.q + " " + item.r + " " + item.s);
+        console.log("clicked: " + item.info.sectorName);
     }
 
     return (
         <>
             <Typography>Map</Typography>
-            <HexGrid viewBox="-50 -50 100 100"
-            >
+            <HexGrid>
                 <Layout
                     flat={true}
                     spacing={1.1}
                     origin={{ x: 0, y: 0 }}
-                    size={{ x: 3, y: 3 }}
+                    size={{ x: 3.3, y: 3.4 }}
                 >
                     {
                         hexagons.map((hex, i) => (
@@ -36,13 +35,11 @@ export default function MapComponent() {
                                 r={hex.sectorAddress.r}
                                 s={hex.sectorAddress.s}
                                 onClick={() => {
-                                    handleSelection(hex.sectorAddress)
+                                    handleSelection(hex)
                                 }}
-
                             >
-                                <Text >
-                                    {hex.sectorName}
-                                    {/*{HexUtils.getID(hex.hex)}*/}
+                                <Text>
+                                    {hex.info.sectorName}
                                 </Text>
                             </Hexagon>
                         ))

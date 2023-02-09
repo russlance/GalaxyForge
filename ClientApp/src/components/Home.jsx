@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Box, Typography, Grid, Button } from "@mui/material";
-import { Info } from "./Info";
+import Info from "./Info";
 import MapComponent from "./MapComponent";
 import RelationalGraph from "./RelationalGraph";
 
@@ -26,7 +26,6 @@ export class Home extends Component {
                     display: "flex",
                     flexDirection: "row",
                     backgroundColor: "#212121",
-                    //height: "100%",
                     justifyContent: "center",
                     p: "3px",
                 }}

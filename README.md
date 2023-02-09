@@ -2,7 +2,7 @@
 
 ## NOTE: This is a work in progress!
 
-Galaxy Forge is a tool to to build out the lore for your galaxy. There is a potential for 1,477,003,723 solar systems throughout this galaxy.
+Galaxy Forge is a tool to to build out the lore for your galaxy. There is a potential for 1,481,830,532 solar systems throughout this galaxy.
 
 This tool does not come pre-populated with data, but needs to be fleshed out by the user.
 
@@ -13,6 +13,8 @@ This tool does not come pre-populated with data, but needs to be fleshed out by 
 ## Galactic Map
 
 The Galactic Map is depicted in a 2D envionment. Each section occupies the thickness of the galactic ring.
+
+The map below is only a diagram to show the layout of the sections and does not represent comparative scale.
 
 ![Image map](/galaxyMap.png)
 

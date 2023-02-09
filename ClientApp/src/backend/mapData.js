@@ -7,6 +7,7 @@ export const generateGrid = () => {
     const grid = [];
     temp.map((hex) => {
         const tile = new Tile();
+        tile.hex = hex;
         tile.sectorAddress = hex;
         grid.push(tile);
     });

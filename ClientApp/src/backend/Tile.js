@@ -3,14 +3,14 @@
         this.hex = hex;
         this.info = {
             galaxyName: "Milkyway",
-            galacticSector: "Sector 1",
+            galacticSectorName: "Galactic sector name",
             galacticSectorAddress: "1",
-            galacticZone: "000000",
+            galacticZoneName: "Zone name",
             galacticZoneAddress: "000000",
-            regionName: "Starting region",
+            regionName: "Region name",
             regionAddress: "000000",
-            sectorName: "Starting sector",
-            sectorAddress: "",
+            sectorName: "Sector name",
+            sectorAddress: "000000",
             systemName: "This system",
         };
     }
