@@ -2,7 +2,7 @@
 
 ## NOTE: This is a work in progress!
 
-Galaxy Forge is a tool to to build out the lore for your galaxy. With this tool there are 2,471,326,208 solar systems available within this galaxy. 
+Galaxy Forge is a tool to build out the lore for your galaxy. With this tool there are 2,471,326,208 solar systems available within this galaxy. 
 
 This tool utilizes a database capable of retaining all of the information for the entire galaxy. However, if you were to fully populate the entire galaxy it would create a very large database. 
 
