@@ -32,9 +32,9 @@ The galactic core is an area depicted as a hexagon. This area consists of 169 [G
 
 ### Galactic Sectors
 
-On each edge of the [Galactic Core](#galactic-core) is a Galactic Sector, making six galactic sectors in total. 
+Galactic Sectors include the [Galactic Core](#galactic-core) (in the shape of a hexagon), plus each edge of the Galactic Core (in the shape of half of an hexagon (see [Galactic Map](#galactic-map)), made up of hexagons). See the [Galactic Map](#galactic-map) above.
 
-Each galactic sector is made up of 51 [Glactic Zones](#galactic-zones) in the shape of half of an hexagon (see [Galactic Map](#galactic-map)), made up of hexagons.
+This makes a total of 7 Galactic Sectors.
 
 ### Galactic Zones
 
