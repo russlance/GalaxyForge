@@ -2,11 +2,11 @@
 
 namespace GalaxyForge.Models
 {
-    public class RegionConfiguration : EntityTypeConfiguration<Region>
+    public class ShipConfiguration : EntityTypeConfiguration<Ship>
     {
-        public RegionConfiguration()
+        public ShipConfiguration()
         {
-            this.Property(s => s.RegionName)
+            this.Property(s => s.ShipName)
                 .IsOptional()
                 .HasMaxLength(20);
         }

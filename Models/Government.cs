@@ -4,6 +4,7 @@
     {
         public int GovernmentId { get; set; }
         public string? GovernmentName { get; set; }
+        public int? FormationDate { get; set; }
 
         public int? CelestialBodyId { get; set; }   // Capital World
         public virtual ICollection<GalacticSector>? GalacticSectors { get; set; }

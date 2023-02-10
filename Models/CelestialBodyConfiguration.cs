@@ -10,15 +10,8 @@ namespace GalaxyForge.Models
                 .IsOptional()
                 .HasMaxLength(20);
 
-            this.Property(s => s.CelestialBodyName)
-                .IsConcurrencyToken();
-
-            this.Property(s => s.CelestialBodyAddress)
-                .IsOptional()
-                .HasMaxLength(12);
-
-            this.Property(s => s.CelestialBodyAddress)
-                .IsConcurrencyToken();
+            this.Property(s => s.SolarSystemId)
+                .IsRequired();
         }
     }
 }

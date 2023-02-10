@@ -10,9 +10,6 @@ namespace GalaxyForge.Models
                 .IsOptional()
                 .HasMaxLength(20);
 
-            this.Property(s => s.OrganizationName)
-                .IsConcurrencyToken();
-
             this.Property(s => s.OrganizationDescription)
                 .IsOptional()
                 .HasMaxLength(800);

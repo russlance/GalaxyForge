@@ -9,9 +9,6 @@ namespace GalaxyForge.Models
             this.Property(s => s.StructureName)
                 .IsOptional()
                 .HasMaxLength(20);
-
-            this.Property(s => s.StructureName)
-                .IsConcurrencyToken();
         }
     }
 }

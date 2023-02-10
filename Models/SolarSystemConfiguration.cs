@@ -16,9 +16,6 @@ namespace GalaxyForge.Models
             this.Property(s => s.SolarSystemAddress)
                 .IsOptional()
                 .HasMaxLength(12);
-
-            this.Property(s => s.SolarSystemAddress)
-                .IsConcurrencyToken();
         }
     }
 }

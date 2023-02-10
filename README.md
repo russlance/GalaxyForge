@@ -6,15 +6,16 @@ Galaxy Forge is a tool to build out the lore for your galaxy. With this tool the
 
 This tool utilizes a database capable of retaining all of the information for the entire galaxy. However, if you were to fully populate the entire galaxy it would create a very large database. 
 
-This tool does not come pre-populated with data, but needs to be fleshed out by the user.
+This tool does not come pre-populated with data, but needs to be fleshed out by the user. It does, however, come with seed data that establishes the 7 [Galactic Sectors](#galoactic-sectors). The names of each can be edited.
 
 ## Table of Contents
 1. [Galactic Map](#galactic-map)
-2. [Data Structure](#data-structure)
+2. [Time](#time)
+3. [Data](#data)
 
 ## Galactic Map
 
-The Galactic Map is depicted in a 2D envionment. Each section occupies the thickness of the galactic ring. 
+The Galactic Map is depicted in a 2D envionment. Each section occupies the thickness of the galactic ring. If the user wishes, they may include the positive/negative position from the galactic plane to explain duration of travel between [Solar Systems](#solar-systems). This is an optional attribute that can be left blank.
 
 The map below is only a diagram to show the layout of the sections and does not represent comparative scale.
 
@@ -57,4 +58,16 @@ Each solar system may contain:
 * Structures. A structure can be stations, mining bases, military bases, etc.
 * Species.
 
-## Data Structure
+## Time
+
+Time is tracked by Galactic Year (the exact duration of this year is up to the user of this tool), followed by a decimal representing a tenth of a year (e.g. 1234.5).
+
+## Data
+
+In addition to the above mentioned galactic components, this tool also tracks:
+ * Events
+ * Governments
+ * Organizations
+ * Species
+ * Celestial Bodies
+ * Structures

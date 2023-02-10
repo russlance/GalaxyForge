@@ -16,9 +16,6 @@ namespace GalaxyForge.Models
             this.Property(s => s.SpeciesDescription)
                 .IsOptional()
                 .HasMaxLength(500);
-
-            this.Property(s => s.SpeciesDescription)
-                .IsConcurrencyToken();
         }
     }
 }
