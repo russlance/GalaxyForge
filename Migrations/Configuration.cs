@@ -1,12 +1,24 @@
-﻿using System.Data.Entity;
-
-namespace GalaxyForge.Models
+﻿namespace GalaxyForge.Migrations
 {
-    /* https://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx */
+    using GalaxyForge.Models;
+    using System.Data.Entity.Migrations;
 
-    public class GalaxyDBInitializer : DropCreateDatabaseAlways<GalaxyContext>
+    /* Each time the DB Tables are adjusted, run:
+        - add-migration <name you use>
+        - update-database
+
+        For more info, see:
+            https://www.youtube.com/watch?v=yT04aOPRs-g
+    */
+
+    internal sealed class Configuration : DbMigrationsConfiguration<GalaxyForge.Models.GalaxyContext>
     {
-        protected override void Seed(GalaxyContext context)
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = false;
+        }
+
+        protected override void Seed(GalaxyForge.Models.GalaxyContext context)
         {
             IList<GalacticSector> galacticSectors = new List<GalacticSector>();
 
@@ -42,6 +54,10 @@ namespace GalaxyForge.Models
             context.GalacticSectors.AddRange(galacticSectors);
 
             base.Seed(context);
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+            //  to avoid creating duplicate seed data.
         }
     }
 }

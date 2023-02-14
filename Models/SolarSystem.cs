@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class SolarSystem
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SolarSystemId { get; set; }
+
         public string SolarSystemAddress { get; set; }
         public string? SolarSystemName { get; set; }
         public int? SolarSystemGalacticPlaneVariance { get; set; }

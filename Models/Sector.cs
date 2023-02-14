@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class Sector
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SectorID { get; set; }
+
         public string SectorAddress { get; set; }
         public string? SectorName { get; set; }
 

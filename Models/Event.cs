@@ -3,7 +3,7 @@
     public class Event
     {
         public int EventId { get; set; }
-        public string EventDescription { get; set; }
+        public string? EventDescription { get; set; }
         public int? EventDate { get; set; }
 
         public virtual ICollection<Sector>? Sectors { get; set; }

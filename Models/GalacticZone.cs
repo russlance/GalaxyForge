@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class GalacticZone
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int GalacticZoneId { get; set; }
+
         public string GalacticZoneAddress { get; set; }
         public string? GalacticZoneName { get; set; }
 

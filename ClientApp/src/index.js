@@ -4,19 +4,19 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import "./style.css";
-import { Provider } from "react-redux";
-import store from "./store";
+//import { Provider } from "react-redux";
+//import store from "./store";
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-    <Provider store={store}>
-        <BrowserRouter basename={baseUrl}>
-            <App />
-        </BrowserRouter>
-    </Provider>
+    //<Provider store={store}>
+    <BrowserRouter basename={baseUrl}>
+        <App />
+    </BrowserRouter>
+    // </Provider>
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -27,4 +27,4 @@ serviceWorkerRegistration.unregister();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//reportWebVitals();

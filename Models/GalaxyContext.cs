@@ -6,26 +6,30 @@ namespace GalaxyForge.Models
     {
         public GalaxyContext() : base("GalaxyDB")
         {
-            Database.SetInitializer<GalaxyContext>
-                (new CreateDatabaseIfNotExists<GalaxyContext>());
+            /* https://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx */
+
+            Database.SetInitializer(new GalaxyDBInitializer());
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Configurations.Add(new GalacticSectorConfigurations());
+        /*
+                 protected override void OnModelCreating(DbModelBuilder modelBuilder)
+                {
+                    modelBuilder.Configurations.Add(new GalacticSectorConfigurations());
 
-            modelBuilder.Entity<GalacticZone>()
-                .ToTable("Galactic Zones");
+                                 modelBuilder.Entity<GalacticZone>()
+                                    .ToTable("Galactic Zones");
 
-            modelBuilder.Entity<GalacticZone>()
-                .MapToStoredProcedures();
-        }
+                                modelBuilder.Entity<GalacticZone>()
+                                    .MapToStoredProcedures();
+                }
+         */
 
         public DbSet<CelestialBody> CelestialBodies { get; set; }
-        public DbSet<City> Citys { get; set; }
+        public DbSet<City> Cities { get; set; }
         public DbSet<Equipment> Equipment { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<GalacticSector> GalacticSectors { get; set; }
+
         public DbSet<GalacticZone> GalacticZones { get; set; }
         public DbSet<Government> Governments { get; set; }
         public DbSet<Organization> Organizations { get; set; }

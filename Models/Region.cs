@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class Region
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RegionId { get; set; }
+
         public string RegionAddress { get; set; }
         public string? RegionName { get; set; }
 
