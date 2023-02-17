@@ -1,7 +1,21 @@
 ﻿namespace GalaxyForge.Models
 {
-    public class GalaxyDataAccessLayer
+    public class GalacticSectorDataAccessLayer
     {
+        private GalaxyContext context = new GalaxyContext();
+
+        public IEnumerable<GalacticSector> GetAllGalacticSectors()
+        {
+            try
+            {
+                return context.GalacticSectors.ToList();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public interface IGenericDataRepository<T> where T : class
         {
             /*

@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public GovernmentConfiguration()
         {
-            this.Property(s => s.GovernmentName)
+            this.Property(s => s.Name)
                     .IsOptional()
                     .HasMaxLength(20);
         }

@@ -2,9 +2,9 @@
 {
     public class CelestialBody
     {
-        public int CelestialBodyId { get; set; }
-        public string? CelestialBodyName { get; set; }
-        public string? CelestialBodyDescription { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
 
         public int SolarSystemId { get; set; }
         public virtual ICollection<Species>? Species { get; set; }

@@ -5,10 +5,12 @@ namespace GalaxyForge.Models
     public class Sector
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int SectorID { get; set; }
+        public int Id { get; set; }
 
-        public string SectorAddress { get; set; }
-        public string? SectorName { get; set; }
+        public int Q { get; set; }
+        public int R { get; set; }
+        public int S { get; set; }
+        public string? Name { get; set; }
 
         public virtual Region RegionId { get; set; }
         public virtual ICollection<SolarSystem>? SolarSystems { get; set; }

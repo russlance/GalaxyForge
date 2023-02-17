@@ -2,9 +2,10 @@
 {
     public class Event
     {
-        public int EventId { get; set; }
-        public string? EventDescription { get; set; }
-        public int? EventDate { get; set; }
+        public int Id { get; set; }
+        public string? Description { get; set; }
+        public int? StartDate { get; set; }
+        public int? EndDate { get; set; }
 
         public virtual ICollection<Sector>? Sectors { get; set; }
         public virtual ICollection<CelestialBody>? CelestialBodies { get; set; }

@@ -6,16 +6,9 @@ namespace GalaxyForge.Models
     {
         public SolarSystemConfiguration()
         {
-            this.Property(s => s.SolarSystemName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
-
-            this.Property(s => s.SolarSystemName)
-                .IsConcurrencyToken();
-
-            this.Property(s => s.SolarSystemAddress)
-                .IsOptional()
-                .HasMaxLength(12);
         }
     }
 }

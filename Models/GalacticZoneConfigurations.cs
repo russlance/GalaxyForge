@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public GalacticZoneConfigurations()
         {
-            this.Property(s => s.GalacticZoneName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
         }

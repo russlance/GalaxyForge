@@ -2,12 +2,12 @@
 {
     public class Equipment
     {
-        public int EquipmentId { get; set; }
-        public string? EquipmentName { get; set; }
-        public string? EquipmentType { get; set; }
-        public string? EquipmentDescription { get; set; }
-        public string? EquipmentStatus { get; set; }
-        public int? ManufactureDate { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Type { get; set; }
+        public string? Description { get; set; }
+        public string? Condition { get; set; }
+        public int? StartDate { get; set; }
 
         public virtual Government? GovernmentId { get; set; }
         public virtual Organization? OrganizationId { get; set; }

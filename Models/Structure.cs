@@ -5,11 +5,12 @@ namespace GalaxyForge.Models
     public class Structure
     {
         [Key]
-        public int StuctureId { get; set; }
+        public int Id { get; set; }
 
-        public string? StructureName { get; set; }
-        public string? StructureDescription { get; set; }
-        public int? ConstructionDate { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public int? StartDate { get; set; }
+        public int? EndDate { get; set; }
 
         public SolarSystem SolarSystem { get; set; }
         public int? OrganizationId { get; set; }

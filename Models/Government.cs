@@ -2,9 +2,10 @@
 {
     public class Government
     {
-        public int GovernmentId { get; set; }
-        public string? GovernmentName { get; set; }
-        public int? FormationDate { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public int? StartDate { get; set; }
+        public int? EndDate { get; set; }
 
         public int? CelestialBodyId { get; set; }   // Capital World
         public virtual ICollection<GalacticSector>? GalacticSectors { get; set; }

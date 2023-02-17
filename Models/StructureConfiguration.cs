@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public StructureConfiguration()
         {
-            this.Property(s => s.StructureName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
         }

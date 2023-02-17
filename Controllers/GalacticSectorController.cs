@@ -5,55 +5,47 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GalaxyForge.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class GalaxyController : ControllerBase
+    public class GalacticSectorController : Controller
     {
-        private GalaxyDataAccessLayer galaxy = new GalaxyDataAccessLayer();
+        private GalacticSectorDataAccessLayer galacticSector = new GalacticSectorDataAccessLayer();
 
-        /*
-         [HttpGet]
+        [HttpGet]
         [Route("api/GalacticSector/Index")]
         public IEnumerable<GalacticSector> GetGalacticSectors()
         {
-            return galaxy.GetAllGalacticSectors();
+            return galacticSector.GetAllGalacticSectors();
         }
-
-        [HttpGet]
-        [Route("api/{}/Details/{id}")]
-        public GalacticSector
-         */
     }
 }
 
 /*
-          // GET: api/<GalaxyController>
+          // GET: api/<GalacticSectorController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<GalaxyController>/5
+        // GET api/<GalacticSectorController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<GalaxyController>
+        // POST api/<GalacticSectorController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<GalaxyController>/5
+        // PUT api/<GalacticSectorController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<GalaxyController>/5
+        // DELETE api/<GalacticSectorController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

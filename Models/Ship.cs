@@ -2,10 +2,11 @@
 {
     public class Ship
     {
-        public int ShipId { get; set; }
-        public string? ShipName { get; set; }
-        public string? ShipDescription { get; set; }
-        public int? ConstructionDate { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public int? StartDate { get; set; }
+        public int? EndDate { get; set; }
 
         public Organization? Organization { get; set; }
         public Government? Government { get; set; }

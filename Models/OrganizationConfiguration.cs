@@ -6,11 +6,11 @@ namespace GalaxyForge.Models
     {
         public OrganizationConfiguration()
         {
-            this.Property(s => s.OrganizationName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
 
-            this.Property(s => s.OrganizationDescription)
+            this.Property(s => s.Description)
                 .IsOptional()
                 .HasMaxLength(800);
         }

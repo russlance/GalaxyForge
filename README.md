@@ -36,7 +36,7 @@ The Galactic Map is depicted as a 2D map. Each section occupies the thickness of
 
 The map below is only a diagram to show the layout of the sections and does not represent comparative scale.
 
-![Image map](/galaxyMap.png)
+![Image map](/Assets/galaxyMap.png)
 
 ### The Galactic Map is made up of the following:
 1. [Galactic Core](#galactic-core)

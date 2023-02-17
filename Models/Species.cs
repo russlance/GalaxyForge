@@ -2,9 +2,11 @@
 {
     public class Species
     {
-        public int SpeciesId { get; set; }
-        public string? SpeciesName { get; set; }
-        public string? SpeciesDescription { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public int? StartDate { get; set; }
+        public int? EndDate { get; set; }
 
         public int? CelestialBodyId { get; set; } // Homeworld
         public int? GovernmentId { get; set; }  // Ruling government

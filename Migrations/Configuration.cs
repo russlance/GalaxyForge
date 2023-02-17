@@ -24,31 +24,31 @@
 
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 1"
+                Name = "Sector 1"
             });
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 2"
+                Name = "Sector 2"
             });
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 3"
+                Name = "Sector 3"
             });
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 4"
+                Name = "Sector 4"
             });
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 5"
+                Name = "Sector 5"
             });
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 6"
+                Name = "Sector 6"
             });
             galacticSectors.Add(new GalacticSector()
             {
-                GalacticSectorName = "Sector 7"
+                Name = "Sector 7"
             });
 
             context.GalacticSectors.AddRange(galacticSectors);

@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public CelestialBodyConfiguration()
         {
-            this.Property(s => s.CelestialBodyName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
 

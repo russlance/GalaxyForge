@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public GalacticSectorConfigurations()
         {
-            this.Property(s => s.GalacticSectorName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
         }

@@ -27,15 +27,32 @@ export default function MapComponent() {
     const [currentHex, setCurrentHex] = useState(1);
     const [prevHex, setPrevHex] = useState(0);
     const [nextHex, setNextHex] = useState(2);
+    const [hexTextSize, setHexTextSize] = useState("0.1em")
+    const [mapData, setMapData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const generateMap = (gridSize) => {
+    const getData = () => {
+        fetch("api/GalacticSector/Index")
+            .then((response) => response.json())
+            .then(data => {
+                setIsLoading(true);
+                setMapData(data);
+            })
+            .then(Promise.resolve(1))
+            .catch(() => setIsLoading(false));
+    }
+
+    const generateMap = async (gridSize) => {
+        await getData();
         var temp;
         switch (gridSize) {
             case 0:
                 temp = 50;
+                setHexTextSize("0.5em");
                 break;
             case 1:
-                temp = 12;
+                temp = 15;
+                setHexTextSize("0.1em")
                 break;
             case 2:
                 temp = 10;
@@ -53,7 +70,8 @@ export default function MapComponent() {
                 temp = 4;
                 break;
             case 7:
-                temp = 3.2;
+                temp = 3.5;
+                setHexTextSize("0.05em");
                 break;
             case 8:
                 temp = 2.8;
@@ -68,6 +86,20 @@ export default function MapComponent() {
 
         setHexSize(temp);
         setDisplayMap(generateGrid(gridSize));
+        joinMapToData();
+    }
+
+    const joinMapToData = () => {
+        console.log("mapping to grid");
+        console.log("mapData: " + mapData.length);
+        mapData.map((hex, i) => {
+            console.log("inside: " + hex.hex.q);
+            if (hex.hex.Q === null) {
+                hex.hex.Q = displayMap[i].q;
+                hex.hex.R = displayMap[i].r;
+                hex.hex.S = displayMap[i].s;
+            }
+        })
     }
 
     const handleSelection = (item, mSize) => {
@@ -146,14 +178,14 @@ export default function MapComponent() {
                         displayMap.map((hex, i) => (
                             <Hexagon
                                 key={i}
-                                q={hex.sectorAddress.q}
-                                r={hex.sectorAddress.r}
-                                s={hex.sectorAddress.s}
+                                q={hex.hex.q}
+                                r={hex.hex.r}
+                                s={hex.hex.s}
                                 onClick={() => {
                                     handleSelection(hex, nextHex);
                                 }}
                             >
-                                <Text>
+                                <Text fontSize={hexTextSize}>
                                     {currentHexTitle}
                                 </Text>
                             </Hexagon>

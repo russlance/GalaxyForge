@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public SectorConfiguration()
         {
-            this.Property(s => s.SectorName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
         }

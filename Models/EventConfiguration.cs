@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public EventConfiguration()
         {
-            this.Property(s => s.EventDescription)
+            this.Property(s => s.Description)
                 .IsOptional()
                 .HasMaxLength(800);
         }

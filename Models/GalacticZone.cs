@@ -5,10 +5,12 @@ namespace GalaxyForge.Models
     public class GalacticZone
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int GalacticZoneId { get; set; }
+        public int Id { get; set; }
 
-        public string GalacticZoneAddress { get; set; }
-        public string? GalacticZoneName { get; set; }
+        public int Q { get; set; }
+        public int R { get; set; }
+        public int S { get; set; }
+        public string? Name { get; set; }
 
         public virtual GalacticSector GalacticSectorId { get; set; }
         public virtual ICollection<Region>? Regions { get; set; }

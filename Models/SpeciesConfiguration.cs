@@ -6,14 +6,14 @@ namespace GalaxyForge.Models
     {
         public SpeciesConfiguration()
         {
-            this.Property(s => s.SpeciesName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
 
-            this.Property(s => s.SpeciesName)
+            this.Property(s => s.Name)
                 .IsConcurrencyToken();
 
-            this.Property(s => s.SpeciesDescription)
+            this.Property(s => s.Description)
                 .IsOptional()
                 .HasMaxLength(500);
         }

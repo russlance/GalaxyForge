@@ -2,10 +2,11 @@
 {
     public class City
     {
-        public int CityId { get; set; }
-        public string? CityName { get; set; }
-        public string? CityDescription { get; set; }
-        public int? CityFoundingDate { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? Condition { get; set; }
+        public int? StartDate { get; set; }
 
         public virtual CelestialBody? CelestialBodyId { get; set; }
         public virtual ICollection<Event>? Events { get; set; }

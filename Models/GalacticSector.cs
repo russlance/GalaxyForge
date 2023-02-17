@@ -2,8 +2,11 @@
 {
     public class GalacticSector
     {
-        public int GalacticSectorId { get; set; }
-        public string? GalacticSectorName { get; set; }
+        public int Id { get; set; }
+        public int Q { get; set; }
+        public int R { get; set; }
+        public int S { get; set; }
+        public string? Name { get; set; }
 
         public virtual ICollection<GalacticZone>? GalacticZones { get; set; }
         public virtual ICollection<Government>? Governments { get; set; }

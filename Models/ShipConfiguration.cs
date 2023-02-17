@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public ShipConfiguration()
         {
-            this.Property(s => s.ShipName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
         }

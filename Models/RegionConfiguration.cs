@@ -6,7 +6,7 @@ namespace GalaxyForge.Models
     {
         public RegionConfiguration()
         {
-            this.Property(s => s.RegionName)
+            this.Property(s => s.Name)
                 .IsOptional()
                 .HasMaxLength(20);
         }
