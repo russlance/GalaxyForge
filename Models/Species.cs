@@ -8,8 +8,8 @@
         public int? StartDate { get; set; }
         public int? EndDate { get; set; }
 
-        public int? CelestialBodyId { get; set; } // Homeworld
-        public int? GovernmentId { get; set; }  // Ruling government
-        public int? OrganizationId { get; set; }  // or ruling organization
+        public virtual int? CelestialBodyId { get; set; } // Homeworld
+        public virtual int? GovernmentId { get; set; }  // Ruling government
+        public virtual int? OrganizationId { get; set; }  // or ruling organization
     }
 }

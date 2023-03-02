@@ -21,6 +21,7 @@ const TitleEnums = {
 export default function MapComponent() {
     const [galaxySize, setGalaxySize] = useState(7);
     const [displayMap, setDisplayMap] = useState(generateGrid(0));
+    const [mapData, setMapData] = useState([]);
     const [hexSize, setHexSize] = useState(12);
     const [currentHexTitle, setCurrentHexTitle] = useState(TitleEnums[1]);
     const [prevHexTitle, setPrevHexTitle] = useState("");
@@ -28,18 +29,27 @@ export default function MapComponent() {
     const [prevHex, setPrevHex] = useState(0);
     const [nextHex, setNextHex] = useState(2);
     const [hexTextSize, setHexTextSize] = useState("0.1em")
-    const [mapData, setMapData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    const getData = () => {
-        fetch("api/GalacticSector/Index")
-            .then((response) => response.json())
-            .then(data => {
+    const getData = async () => {
+        console.log("fetching");
+        await fetch("api/GalacticSector/GetAllGalacticSectors")
+            .then(response => {
+                console.log("response: ");
+                console.log(response.json());
+                response.json();
+            })
+            .then((data) => {
+                console.log("mapping: " + data);
                 setIsLoading(true);
                 setMapData(data);
             })
             .then(Promise.resolve(1))
-            .catch(() => setIsLoading(false));
+            .catch(error => {
+                console.error("error fetching data: " + error.message);
+                setIsLoading(false);
+            })
+            .finally(setIsLoading(false));
     }
 
     const generateMap = async (gridSize) => {
@@ -93,11 +103,12 @@ export default function MapComponent() {
         console.log("mapping to grid");
         console.log("mapData: " + mapData.length);
         mapData.map((hex, i) => {
-            console.log("inside: " + hex.hex.q);
-            if (hex.hex.Q === null) {
-                hex.hex.Q = displayMap[i].q;
-                hex.hex.R = displayMap[i].r;
-                hex.hex.S = displayMap[i].s;
+            console.log("inside: " + hex.q);
+            if (hex.Q === null) {
+                hex.Q = displayMap[i].q;
+                hex.R = displayMap[i].r;
+                hex.S = displayMap[i].s;
+                displayMap[i].name = hex.Name;
             }
         })
     }
@@ -147,7 +158,7 @@ export default function MapComponent() {
             default: break;
         };
         if (item != null) {
-            console.log("clicked: " + item.info.sectorName);
+            console.log("clicked: " + item.name);
         };
     };
 
@@ -178,15 +189,15 @@ export default function MapComponent() {
                         displayMap.map((hex, i) => (
                             <Hexagon
                                 key={i}
-                                q={hex.hex.q}
-                                r={hex.hex.r}
-                                s={hex.hex.s}
+                                q={hex.q}
+                                r={hex.r}
+                                s={hex.s}
                                 onClick={() => {
                                     handleSelection(hex, nextHex);
                                 }}
                             >
                                 <Text fontSize={hexTextSize}>
-                                    {currentHexTitle}
+                                    {hex.name}
                                 </Text>
                             </Hexagon>
                         ))

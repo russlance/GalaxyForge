@@ -1,5 +1,6 @@
 ﻿using GalaxyForge.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -7,13 +8,21 @@ namespace GalaxyForge.Controllers
 {
     public class GalacticSectorController : Controller
     {
-        private GalacticSectorDataAccessLayer galacticSector = new GalacticSectorDataAccessLayer();
+        private GalacticSectorDataAccessLayer galacticSectorDAL = new GalacticSectorDataAccessLayer();
 
         [HttpGet]
-        [Route("api/GalacticSector/Index")]
-        public IEnumerable<GalacticSector> GetGalacticSectors()
+        [Route("api/GalacticSector/GetAllGalacticSectors")]
+        public IEnumerable<GalacticSector> GetAllGalacticSectors()
         {
-            return galacticSector.GetAllGalacticSectors();
+            Debug.WriteLine("getting info from db");
+            return galacticSectorDAL.GetAllGalacticSectors();
+        }
+
+        [HttpPost]
+        [Route("api/GalacticSector/Create")]
+        public int Create(GalacticSector galacticSector)
+        {
+            return galacticSectorDAL.AddGalacticSector(galacticSector);
         }
     }
 }

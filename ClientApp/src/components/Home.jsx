@@ -5,18 +5,10 @@ import MapComponent from "./MapComponent";
 import RelationalGraph from "./RelationalGraph";
 
 export class Home extends Component {
-    //export function Home() {
     static displayName = Home.name;
     constructor(props) {
         super(props);
     }
-    //const[data, setData] = useState();
-
-    /**    useEffect(() => {
-            fetch("api/files")
-                .then((response) => response.json())
-                .then((json) => setData(json))
-    }); */
 
     render() {
         return (

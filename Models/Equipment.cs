@@ -9,6 +9,7 @@
         public string? Condition { get; set; }
         public int? StartDate { get; set; }
 
+        public virtual CelestialBody? CelestialBodyId { get; set; }
         public virtual Government? GovernmentId { get; set; }
         public virtual Organization? OrganizationId { get; set; }
     }

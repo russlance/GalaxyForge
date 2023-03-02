@@ -24,8 +24,9 @@ namespace GalaxyForge.Models
                 }
          */
 
-        public DbSet<CelestialBody> CelestialBodies { get; set; }
+        // public DbSet<CelestialBody> CelestialBodies { get; set; }
         public DbSet<City> Cities { get; set; }
+
         public DbSet<Equipment> Equipment { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<GalacticSector> GalacticSectors { get; set; }

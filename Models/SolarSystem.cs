@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace GalaxyForge.Models
+﻿namespace GalaxyForge.Models
 {
     public class SolarSystem
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         public int Q { get; set; }
@@ -14,6 +11,7 @@ namespace GalaxyForge.Models
         public int? PlaneVariance { get; set; }
 
         public virtual Sector SectorID { get; set; }
+
         public virtual ICollection<CelestialBody>? CelestialBodies { get; set; }
         public virtual ICollection<Government>? Governments { get; set; }
         public virtual ICollection<Organization>? Organizations { get; set; }

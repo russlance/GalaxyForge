@@ -8,7 +8,8 @@
         public int? StartDate { get; set; }
         public int? EndDate { get; set; }
 
-        public Organization? Organization { get; set; }
-        public Government? Government { get; set; }
+        public virtual CelestialBody? CelestialBodyId { get; set; }
+        public virtual Organization? Organization { get; set; }
+        public virtual Government? Government { get; set; }
     }
 }

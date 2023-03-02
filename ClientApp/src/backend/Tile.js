@@ -1,5 +1,8 @@
 ﻿export class Tile {
-    constructor(hex) {
-        this.hex = hex;
+    constructor(q, r, s, Name) {
+        this.q = q;
+        this.r = r;
+        this.s = s;
+        this.name = Name;
     }
 }

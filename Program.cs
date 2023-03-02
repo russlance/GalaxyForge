@@ -19,7 +19,7 @@ app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
+    pattern: "{controller}/{action=GetAllGalacticSectors}/{id?}");
 
 app.MapFallbackToFile("index.html");
 

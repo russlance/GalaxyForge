@@ -7,13 +7,13 @@ namespace GalaxyForge.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddGalaxyDB : IMigrationMetadata
+    public sealed partial class GalaxyDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddGalaxyDB));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(GalaxyDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "202302141654342_AddGalaxyDB"; }
+            get { return "202302231800312_GalaxyDB"; }
         }
         
         string IMigrationMetadata.Source

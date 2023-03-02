@@ -10,7 +10,6 @@
 
         public virtual CelestialBody? CelestialBodyId { get; set; }
         public virtual ICollection<Event>? Events { get; set; }
-        public virtual ICollection<CelestialBody>? CelestialBodies { get; set; }
         public virtual ICollection<Structure>? Structures { get; set; }
         public virtual ICollection<Species>? Species { get; set; }
         public virtual ICollection<Government>? Governments { get; set; }

@@ -21,34 +21,56 @@ namespace GalaxyForge.Models
 
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 1"
             });
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 2"
             });
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 3"
             });
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 4"
             });
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 5"
             });
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 6"
             });
             galacticSectors.Add(new GalacticSector()
             {
+                Q = 0,
+                R = 0,
+                S = 0,
                 Name = "Sector 7"
             });
 
             context.GalacticSectors.AddRange(galacticSectors);
+            //context.SaveChanges();
 
             base.Seed(context);
         }

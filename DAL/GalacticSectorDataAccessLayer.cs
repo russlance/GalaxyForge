@@ -16,6 +16,17 @@
             }
         }
 
+        public int AddGalacticSector(GalacticSector galacticSector)
+        {
+            try
+            {
+                context.GalacticSectors.Add(galacticSector);
+                context.SaveChanges();
+                return 1;
+            }
+            catch { throw; }
+        }
+
         public interface IGenericDataRepository<T> where T : class
         {
             /*

@@ -18,7 +18,10 @@ export const generateGrid = (size) => {
     const grid = [];
     temp.map((hex) => {
         const tile = new Tile();
-        tile.hex = hex;
+        tile.q = hex.q;
+        tile.r = hex.r;
+        tile.s = hex.s;
+
         grid.push(tile);
     });
 
