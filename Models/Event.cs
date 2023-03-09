@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class Event
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+
         public string? Description { get; set; }
         public int? StartDate { get; set; }
         public int? EndDate { get; set; }

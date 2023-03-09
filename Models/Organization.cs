@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class Organization
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+
         public string? Name { get; set; }
         public int? StartDate { get; set; }
         public int? EndDate { get; set; }

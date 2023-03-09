@@ -1,8 +1,12 @@
-﻿namespace GalaxyForge.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GalaxyForge.Models
 {
     public class City
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+
         public string? Name { get; set; }
         public string? Description { get; set; }
         public string? Condition { get; set; }
